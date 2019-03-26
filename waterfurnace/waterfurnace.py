@@ -259,6 +259,29 @@ class WFReading(object):
         self.tstatcoolingsetpoint = data.get('tstatcoolingsetpoint')
         self.tstatactivesetpoint = data.get('tstatactivesetpoint')
 
+        # Additional info from site
+        self.lockoutstatus = data.get('lockoutstatus')
+        self.AuroraOutputEH1 = data.get('AuroraOutputEH1')
+        self.AuroraOutputEH2 = data.get('AuroraOutputEH2')
+        self.AuroraOutputCC = data.get('AuroraOutputCC')
+        self.AuroraOutputCC2 = data.get('AuroraOutputCC2')
+        self.AOCEnteringWaterTemp = data.get('AOCEnteringWaterTemp')
+        self.lastfault = data.get('lastfault')
+        self.lastlockout = data.get('lastlockout')
+        self.humidity_offset_settings = data.get('humidity_offset_settings')
+        self.humidity = data.get('humidity')
+        self.outdoorair = data.get('outdoorair')
+        self.homeautomationalarm1 = data.get('homeautomationalarm1')
+        self.homeautomationalarm2 = data.get('homeautomationalarm2')
+        self.roomtemp = data.get('roomtemp')
+        self.activesettings = data.get('activesettings')
+        self.TStatActiveSetpoint = data.get('TStatActiveSetpoint')
+        self.TStatMode = data.get('TStatMode')
+        self.TStatHeatingSetpoint = data.get('TStatHeatingSetpoint')
+        self.TStatCoolingSetpoint = data.get('TStatCoolingSetpoint')
+        self.AWLTStatType = data.get('AWLTStatType')
+        self.AWLABCType = data.get('AWLABCType')        
+        
     @property
     def mode(self):
         return FURNACE_MODE[self.modeofoperation]
